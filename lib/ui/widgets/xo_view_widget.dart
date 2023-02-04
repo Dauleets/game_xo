@@ -78,7 +78,7 @@ void NavigationToWinsOrDrawScreen(
       MaterialPageRoute(
         builder: (context) => WinsScreen(
           text: state.result,
-          imageName: 'assets/wins.png',
+          imageName: imageName,
         ),
       ));
   BlocProvider.of<XoBloc>(context).add(ResetEvent());
