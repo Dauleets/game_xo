@@ -11,13 +11,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreen extends State<SplashScreen> {
-  int splashtime = 4;
+  int splashtime = 1;
 
   @override
   void initState() {
     Future.delayed(Duration(seconds: splashtime), () async {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
         return const HomePage();
+        // return const HomePage();
       }));
     });
 

@@ -7,25 +7,29 @@ void main() {
 
 class MainWidget extends StatelessWidget {
   const MainWidget({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'XO game',
       theme: ThemeData(
+          visualDensity: VisualDensity.adaptivePlatformDensity,
           primarySwatch: Colors.red,
           textTheme: const TextTheme(
             bodyMedium: TextStyle(
-              fontSize: 32,
-              color: Color.fromRGBO(8, 31, 50, 1.0),
-              fontWeight: FontWeight.w900,
+              fontSize: 30,
+              color: Colors.red,
+              fontWeight: FontWeight.w700,
             ),
             titleLarge: TextStyle(
               fontSize: 25,
-              color: Color.fromRGBO(0, 0, 0, 0.87),
-              fontWeight: FontWeight.w300,
+              color: Color.fromRGBO(240, 240, 240, 0.867),
+              fontWeight: FontWeight.w400,
               letterSpacing: 0.15,
+            ),
+            titleSmall: TextStyle(
+              fontSize: 35,
+              color: Color.fromRGBO(240, 240, 240, 0.867),
+              fontWeight: FontWeight.w900,
             ),
           )),
       debugShowCheckedModeBanner: false,

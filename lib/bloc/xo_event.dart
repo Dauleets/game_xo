@@ -1,13 +1,15 @@
 part of 'xo_bloc.dart';
 
-@freezed
-class XoEvent with _$XoEvent {
-  const factory XoEvent.resetEvent() = ResetEvent;
-  const factory XoEvent.clickEvent({required int index}) = ClickEvent;
+abstract class XoEvent {
+//   const factory XoEvent.resetEvent() = ResetEvent;
+//   const factory XoEvent.clickEvent({required int index}) = ClickEvent;
+//   const factory XoEvent.drawEvent() = DrawEvent;
+//   const factory XoEvent.winsEvent() = WinsEvent;
 }
-// class ResetEvent extends XoEvent {}
 
-// class ClickEvent extends XoEvent {
-//   final int index;
-//   ClickEvent(this.index);
-// }
+class ResetEvent extends XoEvent {}
+
+class ClickEvent extends XoEvent {
+  final int index;
+  ClickEvent(this.index);
+}
