@@ -1,16 +1,13 @@
 # game_xo
 
-A new Flutter project.
+#tic-tac-toe game in flutter. 
+#terms of reference for the bootcamp(red_mad_robot)
 
-## Getting Started
+# packages:
+ - flutter_bloc: ^8.1.1
+ - freezed: ^2.3.2
+ - freezed_annotation: ^2.2.0
+ - flutter_native_splash: ^2.0.4
+ - build_runner: ^2.3.2
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
