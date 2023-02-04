@@ -62,7 +62,7 @@ class ResultButtonWidget extends StatelessWidget {
                 context, state.result, 'assets/wins.png', state);
           } else if (state.result == 'Draw') {
             NavigationToWinsOrDrawScreen(
-                context, state.result, 'assets/wins.png', state);
+                context, state.result, 'assets/draw.png', state);
           }
         },
         child: Text('Reset', style: Theme.of(context).textTheme.titleLarge),
