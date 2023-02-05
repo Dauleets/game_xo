@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_xo/ui/page/game_page.dart';
+import 'package:game_xo/ui/widgets/theme_changed_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,17 +11,20 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           bottomOpacity: 0,
-          title: Text(
+          title: const Text(
             'Welcome XO game',
-            style: Theme.of(context).textTheme.titleLarge,
           ),
+          actions: const [
+            ThemeChangedWidget(),
+          ],
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/welcome.png',
-                color: Theme.of(context).primaryColor),
+            Image.asset(
+              'assets/welcome.png',
+            ),
             const SizedBox(height: 120),
             Center(
               child: Column(
@@ -47,18 +51,15 @@ class AppElevetedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Theme.of(context).primaryColor,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       ),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (_) {
           return const GamePage();
-          // return const HomePage();
         }));
       },
       child: Text(
         title,
-        style: Theme.of(context).textTheme.titleSmall,
       ),
     );
   }

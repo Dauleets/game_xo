@@ -1,8 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:game_xo/bloc/xo_bloc.dart';
+import 'package:game_xo/logic/bloc_game/xo_bloc.dart';
 import 'package:game_xo/ui/screen/wins_screen.dart';
 
 class XoViewWidget extends StatelessWidget {
@@ -27,7 +26,7 @@ class XoViewWidget extends StatelessWidget {
                     },
                     child: Text(
                       state.str[index],
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme.of(context).textTheme.caption,
                     ),
                   ),
                 ));
@@ -65,7 +64,9 @@ class ResultButtonWidget extends StatelessWidget {
                 context, state.result, 'assets/draw.png', state);
           }
         },
-        child: Text('Reset', style: Theme.of(context).textTheme.titleLarge),
+        child: const Text(
+          'Reset',
+        ),
       ),
     );
   }

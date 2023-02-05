@@ -11,14 +11,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreen extends State<SplashScreen> {
-  int splashtime = 4;
+  int splashtime = 1;
 
   @override
   void initState() {
     Future.delayed(Duration(seconds: splashtime), () async {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
         return const HomeScreen();
-        // return const HomePage();
       }));
     });
 
@@ -43,7 +42,7 @@ class _SplashScreen extends State<SplashScreen> {
         ),
         Text(
           'by Dauleets',
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: Theme.of(context).textTheme.headline1,
         )
       ],
     ));
