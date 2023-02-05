@@ -11,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreen extends State<SplashScreen> {
-  int splashtime = 1;
+  int splashtime = 4;
 
   @override
   void initState() {
@@ -43,7 +43,7 @@ class _SplashScreen extends State<SplashScreen> {
         ),
         Text(
           'by Dauleets',
-          style: Theme.of(context).textTheme.titleSmall,
+          style: Theme.of(context).textTheme.bodyMedium,
         )
       ],
     ));
