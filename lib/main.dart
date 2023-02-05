@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:game_xo/bloc/xo_bloc.dart';
 import 'package:game_xo/ui/screen/splash_screen.dart';
 
 void main() {
@@ -9,31 +11,34 @@ class MainWidget extends StatelessWidget {
   const MainWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'XO game',
-      theme: ThemeData(
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          primarySwatch: Colors.red,
-          textTheme: const TextTheme(
-            bodyMedium: TextStyle(
-              fontSize: 30,
-              color: Colors.red,
-              fontWeight: FontWeight.w700,
-            ),
-            titleLarge: TextStyle(
-              fontSize: 25,
-              color: Color.fromRGBO(240, 240, 240, 0.867),
-              fontWeight: FontWeight.w400,
-              letterSpacing: 0.15,
-            ),
-            titleSmall: TextStyle(
-              fontSize: 35,
-              color: Color.fromRGBO(240, 240, 240, 0.867),
-              fontWeight: FontWeight.w900,
-            ),
-          )),
-      debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+    return BlocProvider<XoBloc>(
+      create: (context) => XoBloc(),
+      child: MaterialApp(
+        title: 'XO game',
+        theme: ThemeData(
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            primarySwatch: Colors.red,
+            textTheme: const TextTheme(
+              bodyMedium: TextStyle(
+                fontSize: 30,
+                color: Colors.red,
+                fontWeight: FontWeight.w700,
+              ),
+              titleLarge: TextStyle(
+                fontSize: 25,
+                color: Color.fromRGBO(240, 240, 240, 0.867),
+                fontWeight: FontWeight.w400,
+                letterSpacing: 0.15,
+              ),
+              titleSmall: TextStyle(
+                fontSize: 35,
+                color: Color.fromRGBO(240, 240, 240, 0.867),
+                fontWeight: FontWeight.w900,
+              ),
+            )),
+        debugShowCheckedModeBanner: false,
+        home: const SplashScreen(),
+      ),
     );
   }
 }
