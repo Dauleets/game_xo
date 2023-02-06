@@ -9,8 +9,9 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'enjoy the game!',
+          style: Theme.of(context).textTheme.headline1,
         ),
         actions: const [
           ThemeChangedWidget(),

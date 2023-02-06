@@ -64,8 +64,9 @@ class ResultButtonWidget extends StatelessWidget {
                 context, state.result, 'assets/draw.png', state);
           }
         },
-        child: const Text(
+        child: Text(
           'Reset',
+          style: Theme.of(context).textTheme.headline1,
         ),
       ),
     );

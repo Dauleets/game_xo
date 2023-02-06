@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:game_xo/ui/page/game_page.dart';
 import 'package:game_xo/ui/widgets/theme_changed_widget.dart';
@@ -12,8 +14,9 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           bottomOpacity: 0,
-          title: const Text(
+          title: Text(
             'Welcome XO game',
+            style: Theme.of(context).textTheme.headline1,
           ),
           actions: const [
             ThemeChangedWidget(),
@@ -25,13 +28,18 @@ class HomeScreen extends StatelessWidget {
           children: [
             Image.asset(
               'assets/welcome.png',
+              width: 300,
+              height: 300,
+              color: Colors.red,
             ),
-            const SizedBox(height: 120),
+            const SizedBox(height: 90),
             Center(
-              child: Column(
-                children: [
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
                   NavuagtionButtonToGamePage(title: 'Start Game'),
-                  SizedBox(height: 20),
+                  SizedBox(width: 30),
                   NavuagtionButtonToUrlLaunchGitScreen(title: 'GitHub'),
                 ],
               ),
@@ -59,8 +67,23 @@ class NavuagtionButtonToGamePage extends StatelessWidget {
           return const GamePage();
         }));
       },
-      child: Text(
-        title,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            title,
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Icon(
+            Icons.play_arrow,
+            color: Theme.of(context).primaryColor,
+            size: 60,
+          ),
+        ],
       ),
     );
   }
@@ -68,7 +91,7 @@ class NavuagtionButtonToGamePage extends StatelessWidget {
 
 class NavuagtionButtonToUrlLaunchGitScreen extends StatelessWidget {
   final String title;
-  NavuagtionButtonToUrlLaunchGitScreen({
+  const NavuagtionButtonToUrlLaunchGitScreen({
     Key? key,
     required this.title,
   }) : super(key: key);
@@ -80,11 +103,26 @@ class NavuagtionButtonToUrlLaunchGitScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       ),
       onPressed: () {
-        final url = 'https://github.com/Dauleets/game_xo';
+        const url = 'https://github.com/Dauleets/game_xo';
         openBrowser(url: url, inApp: true);
       },
-      child: Text(
-        title,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            title,
+            style: Theme.of(context).textTheme.headline1,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Icon(
+            Icons.code,
+            color: Theme.of(context).primaryColor,
+            size: 60,
+          ),
+        ],
       ),
     );
   }

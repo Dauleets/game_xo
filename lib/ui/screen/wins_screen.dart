@@ -16,11 +16,12 @@ class WinsScreen extends StatelessWidget {
             children: [
               Image.asset(
                 imageName,
+                color: Colors.red,
               ),
               const SizedBox(height: 50),
               Text(
                 text,
-                style: Theme.of(context).textTheme.caption,
+                style: Theme.of(context).textTheme.headline2,
               ),
               const SizedBox(height: 100),
               ElevatedButton(
@@ -28,11 +29,12 @@ class WinsScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Padding(
+                child: Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 80.0, vertical: 20.0),
                   child: Text(
                     'reset',
+                    style: Theme.of(context).textTheme.headline1,
                   ),
                 ),
               ),
