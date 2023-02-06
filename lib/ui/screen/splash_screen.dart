@@ -42,7 +42,12 @@ class _SplashScreen extends State<SplashScreen> {
         ),
         Text(
           'by Dauleets',
-          style: Theme.of(context).textTheme.headline1,
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 25,
+            letterSpacing: 4.0,
+            fontWeight: FontWeight.w300,
+          ),
         )
       ],
     ));
