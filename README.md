@@ -6,7 +6,8 @@
 #much has not been done in the project, in the future I will finish!
 
 # packages:
- - flutter_bloc: ^8.1.1
- - flutter_native_splash: ^2.0.4
+ - flutter_bloc
+ - flutter_native_splash
+ - shared_preference
 
 
