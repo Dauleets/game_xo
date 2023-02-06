@@ -57,10 +57,10 @@ class ResultButtonWidget extends StatelessWidget {
       child: BlocListener<XoBloc, XoState>(
         listener: (context, state) {
           if (state.result == 'X Winns' || state.result == 'O Winns') {
-            NavigationToWinsOrDrawScreen(
+            navigationToWinsOrDrawScreen(
                 context, state.result, 'assets/wins.png', state);
           } else if (state.result == 'Draw') {
-            NavigationToWinsOrDrawScreen(
+            navigationToWinsOrDrawScreen(
                 context, state.result, 'assets/draw.png', state);
           }
         },
@@ -72,7 +72,7 @@ class ResultButtonWidget extends StatelessWidget {
   }
 }
 
-void NavigationToWinsOrDrawScreen(
+void navigationToWinsOrDrawScreen(
     BuildContext context, String text, imageName, XoState state) {
   Navigator.push(
       context,

@@ -7,7 +7,6 @@ class Styles {
         primaryColor: isDarkTheme ? Colors.black : AppColors.white100,
         backgroundColor: isDarkTheme ? AppColors.black50 : AppColors.white50,
         indicatorColor: isDarkTheme ? AppColors.black100 : AppColors.white100,
-        buttonColor: isDarkTheme ? AppColors.black100 : AppColors.white100,
         hintColor: isDarkTheme ? AppColors.black100 : AppColors.white100,
         highlightColor: isDarkTheme ? AppColors.black50 : AppColors.white50,
         hoverColor: isDarkTheme ? AppColors.black100 : AppColors.white100,
@@ -23,7 +22,7 @@ class Styles {
             colorScheme: isDarkTheme
                 ? const ColorScheme.dark()
                 : const ColorScheme.light()),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             elevation: 0.0,
             backgroundColor: Colors.cyan,
             titleTextStyle: TextStyle(
@@ -34,7 +33,7 @@ class Styles {
         textSelectionTheme: TextSelectionThemeData(
             selectionColor:
                 isDarkTheme ? AppColors.white50 : AppColors.black50),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           caption: TextStyle(
             fontSize: 45,
             fontWeight: FontWeight.w900,
